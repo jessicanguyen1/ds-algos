@@ -1,5 +1,6 @@
 const reverse = require("./reverse-string/index");
 const palindrome = require("./palindromes/index");
+const intReversal = require("./integer-reversal/index");
 
 /**
  * Testing for reverse-string
@@ -20,7 +21,7 @@ test("Reverse reverses '  abcd' to 'dcba  '", () => {
  * Testing for palindromes
  */
 
-// Test to make sure we have imported the function
+// Test to make sure we imported the function
 test("Palindrome function is defined", () => {
   expect(typeof palindrome).toEqual("function");
 });
@@ -31,4 +32,21 @@ test("Test to see if 'aba' is a palindrome", () => {
 
 test("Test if '  aba' is NOT a palindrome", () => {
   expect(palindrome("   aba")).toBeFalsy();
+});
+
+/**
+ * Testing for integer reversal
+ */
+
+// Test to make sure we imported the function
+test("Integer reversal function is defined", () => {
+  expect(typeof intReversal).toEqual("function");
+});
+
+test("intReversal reverses 32089 to 98023", () => {
+  expect(intReversal(321)).toBe(123);
+});
+
+test("Test to fail if the value ends with 0", () => {
+  expect(intReversal(320)).toBeFalsy();
 });
