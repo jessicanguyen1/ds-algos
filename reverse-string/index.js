@@ -11,7 +11,7 @@ function reverse(str) {
   return str.split("").reduce((rev, char) => char + rev, "");
 }
 
-console.log(reverse("fitgerald"));
+// console.log(reverse("fitgerald"));
 
 module.exports = reverse;
 
