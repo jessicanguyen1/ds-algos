@@ -8,12 +8,10 @@
 // first argument for reduce method will be a temporary variable that we initialize as an empty string
 // second argument is our iterator [i]
 function reverse(str) {
-  return str
-    .split("")
-    .reduce((reversed, character) => character + reversed, "");
+  return str.split("").reduce((rev, char) => char + rev, "");
 }
 
-console.log(reverse("jessica"));
+console.log(reverse("fitgerald"));
 
 module.exports = reverse;
 
