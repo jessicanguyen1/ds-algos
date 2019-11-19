@@ -59,3 +59,8 @@ test("Test to fail if the value ends with 0", () => {
 test("Max-chars function is defined", () => {
   expect(typeof maxChars).toEqual("function");
 });
+
+test("Test if a is the max character of yaaaaaaaay", () => {
+  expect(maxChars("yaaaaaaaay")).toMatch(/a/);
+  //  REMEMBER... expect is it's own function!
+});
