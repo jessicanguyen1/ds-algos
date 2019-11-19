@@ -2,6 +2,7 @@ const reverse = require("./reverse-string/index");
 const palindrome = require("./palindromes/index");
 const intReversal = require("./integer-reversal/index");
 const maxChars = require("./max-chars/index");
+const fizzBuzz = require("./fizz-buzz/index");
 
 /**
  * Testing for reverse-string
@@ -63,4 +64,12 @@ test("Max-chars function is defined", () => {
 test("Test if a is the max character of yaaaaaaaay", () => {
   expect(maxChars("yaaaaaaaay")).toMatch(/a/);
   //  REMEMBER... expect is it's own function!
+});
+
+/**
+ * Testing for Fizz-Buzz
+ */
+
+test("Fizz-buzz function is defined", () => {
+  expect(typeof fizzBuzz).toEqual("function");
 });

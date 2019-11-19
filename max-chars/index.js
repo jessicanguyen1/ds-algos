@@ -3,31 +3,28 @@
  */
 
 function maxChars(str) {
-  let characterObj = {};
-  let characterCounter = 0;
-  let maxCharacter = "";
+  let charObj = {};
+  let max = 0;
+  let maxChar = "";
 
-  //we created an obj with all the characters in there
-  for (let character of str) {
-    if (!characterObj[character]) {
-      characterObj[character] = 1;
+  for (let char of str) {
+    if (!charObj[char]) {
+      charObj[char] = 1;
     } else {
-      characterObj[character]++;
+      charObj[char]++;
     }
   }
 
-  for (let key in characterObj) {
-    // as long as the key (char) is greater than the counter (set to 0), update the characterCounter to that key and set that key to maxCharacter
-    if (characterObj[key] > characterCounter) {
-      characterCounter = characterObj[key];
-      maxCharacter = key;
+  for (let key in charObj) {
+    if (charObj[key] > max) {
+      max = charObj[key];
+      maxChar = key;
     }
   }
-  console.log(maxCharacter);
-  return maxCharacter;
+  return maxChar;
 }
 
-maxChars("yaaaaaaay");
+console.log(maxChars("yayyyyyy"));
 
 module.exports = maxChars;
 
