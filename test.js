@@ -3,10 +3,10 @@ const palindrome = require("./palindromes/index");
 const intReversal = require("./integer-reversal/index");
 const maxChars = require("./max-chars/index");
 const fizzBuzz = require("./fizz-buzz/index");
+const arrayChunking = require("./array-chunking");
 
-/**
- * Testing for reverse-string
- */
+// Testing for reverse-string
+
 test("Reverse function is defined", () => {
   expect(typeof reverse).toEqual("function");
 });
@@ -72,4 +72,9 @@ test("Test if a is the max character of yaaaaaaaay", () => {
 
 test("Fizz-buzz function is defined", () => {
   expect(typeof fizzBuzz).toEqual("function");
+});
+
+// Testing for Array Chunking
+test("Array chunking function is defined", () => {
+  expect(typeof arrayChunking).toEqual("function");
 });
