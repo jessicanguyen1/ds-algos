@@ -6,6 +6,7 @@
  *    -> IF last element does not exist, or if its length is equal to chunk size
  *          -> Push a new chunk into "chunked" with the current element
  *    -> ELSE add the current element into the chunk
+ * 3. Retrun chunked
  */
 
 function arrayChunking(arr, size) {
